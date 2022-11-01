@@ -28,3 +28,7 @@ functions:
     timeout: 7
     memorySize: 256
     description: Long timeout function
+
+package:
+  exclude:
+    - node_modules/**
