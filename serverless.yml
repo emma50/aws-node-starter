@@ -7,14 +7,15 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs14.x
+  # This will be overriden if props is set on the function name
+  timeout: 2
+  memorySize: 512
 
 functions:
-  hello-short-timeout:
+  hello-short-timeout: # function nane
     handler: handler.hello
-    timeout: 3
-    memorySize: 128
     description: short timeout function
-  hello-long-timeout:
+  hello-long-timeout: # function nane
     handler: handler.hello
     timeout: 7
     memorySize: 256
