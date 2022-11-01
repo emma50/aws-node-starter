@@ -10,6 +10,14 @@ provider:
   # This will be overriden if props is set on the function name
   timeout: 2
   memorySize: 512
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "lamda:*"
+          Resource:
+            - "*"
 
 functions:
   hello-short-timeout: # function nane
