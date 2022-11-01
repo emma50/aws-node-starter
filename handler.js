@@ -4,9 +4,8 @@ const AWS = require('aws-sdk')
 
 module.exports.hello = async (event, context) => {
 
-  const lambda = new AWS.Lambda().listFunctions()
-  console.log(lambda)
-
+  console.log(process.env.FIRSTNAME)
+  
   function sleep (time) {
     return new Promise((resolve) => setTimeout(resolve, time));
   }

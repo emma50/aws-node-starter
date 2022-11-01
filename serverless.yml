@@ -4,6 +4,8 @@ service: aws-node-project
 
 frameworkVersion: '3'
 
+useDotenv: true
+
 provider:
   name: aws
   runtime: nodejs14.x
@@ -18,7 +20,8 @@ provider:
             - "lamda:*"
           Resource:
             - "*"
-
+  environment:
+    FIRSTNAME: ${env:FIRST_NAME}
 functions:
   hello-short-timeout: # function nane
     handler: handler.hello
