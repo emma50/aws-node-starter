@@ -9,5 +9,11 @@ provider:
   runtime: nodejs14.x
 
 functions:
-  hello:
+  hello-short-timeout:
     handler: handler.hello
+    timeout: 5
+    memorySize: 128
+  hello-long-timeout:
+    handler: handler.hello
+    timeout: 10
+    memorySize: 256
