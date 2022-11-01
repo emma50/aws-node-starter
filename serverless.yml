@@ -30,5 +30,6 @@ functions:
     description: Long timeout function
 
 package:
+  # Exclude the deployment of files (i.e node_modules) to AWS
   exclude:
     - node_modules/**
