@@ -22,6 +22,7 @@ provider:
             - "*"
   environment:
     FIRSTNAME: ${env:FIRST_NAME}
+
 functions:
   hello-short-timeout: # function nane
     handler: handler.hello
